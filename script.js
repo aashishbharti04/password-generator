@@ -16,6 +16,11 @@ function generate() {
     if (document.getElementById(key).checked) pool += SETS[key];
   }
 
+  // Optionally drop characters that are easy to confuse
+  if (document.getElementById("noAmbiguous").checked) {
+    pool = pool.replace(/[l1IO0]/g, "");
+  }
+
   if (!pool) {
     passwordEl.value = "Select at least one option";
     return;
