@@ -28,6 +28,18 @@ function generate() {
     result += pool[random[i] % pool.length];
   }
   passwordEl.value = result;
+  showStrength(length, pool.length);
+}
+
+function showStrength(length, poolSize) {
+  // Rough strength based on total entropy in bits
+  const bits = length * Math.log2(poolSize);
+  const el = document.getElementById("strength");
+  let label = "Weak";
+  if (bits >= 60) label = "Fair";
+  if (bits >= 80) label = "Strong";
+  if (bits >= 100) label = "Very strong";
+  el.textContent = `Strength: ${label} (~${Math.round(bits)} bits)`;
 }
 
 function copy() {

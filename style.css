@@ -71,3 +71,10 @@ button:hover { transform: translateY(-2px); }
   background: #4ade80;
   color: #06281b;
 }
+
+.strength {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
