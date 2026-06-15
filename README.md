@@ -1,6 +1,10 @@
 # 🔐 Password Generator
 
+![Password Generator preview](preview.svg)
+
 A fast, secure **password generator** that runs entirely in your browser. Uses the browser's cryptographic random generator — nothing is sent anywhere.
+
+🔗 **[Try it live](https://aashishbharti04.github.io/password-generator/)**
 
 ## ✨ Features
 - Adjustable length (4–64 characters)
